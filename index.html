@@ -46,16 +46,14 @@
       </div>
       
         <div class="flex justify-center gap-7 my-12">
-          <button class="  bg-[#B4F461] text-black font-bold text-2xl px-9 py-5 rounded-lg">Donation</button>
-          <button class=" text-[#111111B3] text-2xl font-medium px-10 py-5 rounded-lg bg-slate-200">History</button>
-      </div>
+          <button id="donation-btn" class="  bg-[#B4F461] text-black font-bold text-2xl px-9 py-5 rounded-lg">Donation</button>
+          <button id="history-btn" class=" text-[#111111B3] text-2xl font-medium px-10 py-5 rounded-lg bg-slate-200">History</button>
+        </div>
     </header>
     <main>
-
-        
-          
-        
-        <div class=" card card-side bg-base-100 container mx-auto mb-8 border border-collapse p-5">
+        <!-- All Card Section -->
+        <div id="donation-section">
+          <div class=" card card-side bg-base-100 container mx-auto mb-8 border border-collapse p-5">
             <figure>
               <img src="assets/noakhali.png" alt="">
             </figure>
@@ -112,11 +110,17 @@
               
             </div>
           </div>
+        </div>
+        <!-- History section -->
+        <div id="history-section">
+          <h1>History</h1>
+        </div>
     </main>
     <footer>
 
     </footer>
     <!-- JS File -->
+     <script src="js/utilities.js"></script>
     <script src="/js/main.js"></script>
 </body>
 </html>
