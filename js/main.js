@@ -71,7 +71,7 @@ function handleDonateBtn(cardId){
 
     // Information added by history tap
     const donationTitle = document.getElementById(cardId + '-donate-title').innerText;
-    historySection.innerHTML = `
+    historySection.innerHTML += `
     <div class ="border rounded-xl mx-4 p-5 shadow-inner mb-5">
         <h3 class = "text-xl font-semibold mb-2">${donationAmount} Taka is ${donationTitle}</h3>
         <p class = "text-gray-500"> Date: ${new Date()}</p>
