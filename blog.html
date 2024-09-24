@@ -24,87 +24,92 @@
          }
        }
      </script>
-     <header>
-        <div class="bg-[#F9F7F3] px-10 py-10">
-            <div class="flex justify-between container mx-auto items-center">
-                <div>
-                    <a href="./index.html" class=" bg-lime-400 md:px-8 py-3 rounded-md font-semibold hover:bg-black hover:text-white transition duration-300 text-lg md:text-3xl">Home</a>
-                </div>
-                <div class="flex justify-between items-center gap-2 ">
-                    <img src="assets/logo.png" alt="">
-                    <h2 class="font-bold text-[#111111] text-3xl">Donate Bangladesh</h2>
-                </div>
-                <div class="flex justify-between gap-2">
-                    <img src="assets/coin.png" alt="">
-                    <span id="total-amount" class="text-3xl font-semibold ">5500</span>
-                    <span class="text-3xl font-semibold ">BDT</span>
-                </div>
-            </div>
-        </div>   
-     </header>
-     <main class="container mx-auto max-w-[1280px] mt-16">
-        <section class="mx-4">
-            <h1 class="text-6xl font-bold mb-8">Importent FAQ?</h1>
-            <div class="collapse collapse-plus bg-base-200 mt-16">
-                <input type="radio" name="my-accordion-3" checked="checked" />
-                <div class="collapse-title text-4xl font-semibold"> What is the Document Object Model (DOM)?</div>
-                <div class="collapse-content">
-                  <p class="text-2xl">
-                    The Document Object Model (DOM) is a programming interface used to represent and interact with web documents. It provides a structured representation (like a tree) of a webpage's content, allowing programs (like JavaScript) to read, manipulate, and update the content, structure, and style of the webpage dynamically.</p>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200 mt-10">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-4xl font-medium"> How do you select an element from the DOM?</div>
-                <div class="collapse-content">
-                  <p class="text-3xl">
-                    To select an element from the DOM, you can use various methods in JavaScript. For example:</p>
-                    <ul class="list-disc ml-10 text-2xl mt-4 ">
-                        <li>document.getElementById("elementId")</li>
-                        <li> document.getElementsByClassName("className")</li>
-                        <li>document.getElementsByTagName("tagName")</li>
-                        <li>                            document.querySelector(".className")</li>
-                    </ul>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200 mt-10">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-4xl font-medium ">What is event delegation in the context of the DOM, and why is it useful?</div>
-                <div class="collapse-content">
-                  <p class="text-2xl mt-4">
-                    Event delegation in the DOM is a technique where you attach an event listener to a parent element instead of directly to each individual child element. This means that when an event occurs on any of the child elements, it bubbles up to the parent element, triggering the event listener attached to it.
-                    </p>
-                </div>
-              </div>
-              <div class="collapse collapse-plus bg-base-200 mt-10">
-                <input type="radio" name="my-accordion-3" />
-                <div class="collapse-title text-4xl font-semibold"> How do you manipulate an element's attributes and styles using the DOM?</div>
-                <div class="collapse-content">
-                  <p class="font-semibold text-3xl">1. Manipulating Attributes</p>
-                    <ul class="list-disc ml-10 text-2xl mt-4 " >
-                        <li>let value = element.getAttribute("attributeName");
-                        </li>
-                        <li>element.setAttribute("attributeName", "value");
-                        </li>
-                        <li>element.removeAttribute("attributeName");
-                        </li>
-                    </ul>
-                    <p class="font-semibold text-3xl mt-3">2. Working with CSS Classes</p>
-                    <ul class="list-disc ml-10 text-2xl mt-4 ">
-                        <li>element.classList.add("className");
-                        </li>
-                        <li>element.classList.remove("className");
-                        </li>
-                        <li>element.classList.toggle("className");
-                        </li>
-                        <li>let hasClass = element.classList.contains("className");
-                        </li>
-                    </ul>
-                </div>
-              </div>
-        </section>
-     </main>
 </head>
-<body>   
+<body>
+  <header class="sticky top-0 z-50">
+    <div class="bg-[#F9F7F3] md:px-10 py-10">
+      <div class="flex justify-between container mx-auto items-center max-w-[1280px]">
+        <div class="ml-1">
+          <a href="./index.html" class=" bg-lime-400 px-3 md:px-8 py-3 rounded-md font-semibold hover:bg-black hover:text-white transition duration-300 text-lg md:text-3xl">Home</a>
+      </div>
+        <div class="flex items-center gap-2 w-[165px] md:w-auto">
+          <img src="assets/logo.png" alt="">
+          <h2 class="font-bold text-[#111111] text-base md:text-2xl lg:text-3xl">Donate Bangladesh</h2>
+        </div>
+        <div class="md:flex md:justify-between gap-2">
+          <img src="assets/coin.png" alt="">
+          <span id="total-amount" class=" md:text-3xl font-semibold ">5500</span>
+          <span class="md:text-3xl font-semibold ">BDT</span>
+        </div>
+      </div>
+    </div>
+    
+    <div class="flex bg-white justify-center gap-7 py-6 md:py-10">
+      <button id="donation-btn" class="  bg-[#B4F461] text-black font-bold md:text-2xl px-5 md:px-10 py-3 md:py-5 rounded-lg">Donation</button>
+      <button id="history-btn" class=" text-[#111111B3] md:text-2xl font-medium px-5 md:px-10 py-3 md:py-5 rounded-lg bg-slate-200">History</button>
+    </div>
+  </header>
+ <main class="container mx-auto max-w-[1280px] md:mt-13 lg:mt-16">
+    <section class="mx-4">
+        <h1 class="text-3xl md:text-4xl lg:text-6xl font-bold ">Importent FAQ?</h1>
+        <div class="collapse collapse-plus bg-base-200 mt-8 md: mt-13 lg:mt-16">
+            <input type="radio" name="my-accordion-3" checked="checked" />
+            <div class="collapse-title text-xl md:text-3xl lg:text-4xl font-semibold"> What is the Document Object Model (DOM)?</div>
+            <div class="collapse-content">
+              <p class="text-base md:text-xl lg:text-2xl">
+                The Document Object Model (DOM) is a programming interface used to represent and interact with web documents. It provides a structured representation (like a tree) of a webpage's content, allowing programs (like JavaScript) to read, manipulate, and update the content, structure, and style of the webpage dynamically.</p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-base-200 mt-10">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl md:text-3xl lg:text-4xl font-semibold"> How do you select an element from the DOM?</div>
+            <div class="collapse-content">
+              <p class=" text-base md:text-xl lg:text-2xl">
+                To select an element from the DOM, you can use various methods in JavaScript. For example:</p>
+                <ul class="list-disc ml-2 text-sm md:ml-10 md:text-2xl mt-4 ">
+                    <li>document.getElementById</li>
+                    <li> document.getElementsByClassName</li>
+                    <li>document.getElementsByTagName</li>
+                    <li>document.querySelector</li>
+                </ul>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-base-200 mt-10">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl md:text-3xl lg:text-4xl font-semibold">What is event delegation in the context of the DOM, and why is it useful?</div>
+            <div class="collapse-content">
+              <p class="text-base md:text-xl lg:text-2xl">
+                Event delegation in the DOM is a technique where you attach an event listener to a parent element instead of directly to each individual child element. This means that when an event occurs on any of the child elements, it bubbles up to the parent element, triggering the event listener attached to it.
+                </p>
+            </div>
+          </div>
+          <div class="collapse collapse-plus bg-base-200 mt-10 mb-6 md:mb-10">
+            <input type="radio" name="my-accordion-3" />
+            <div class="collapse-title text-xl md:text-3xl lg:text-4xl font-semibold "> How do you manipulate an element's attributes and styles using the DOM?</div>
+            <div class="collapse-content">
+              <p class="font-semibold text-base md:text-3xl">1. Manipulating Attributes</p>
+                <ul class="list-disc ml-2 text-sm md:ml-10 md:text-xl lg:text-2xl mt-4 " >
+                    <li>let value = element.getAttribute
+                    </li>
+                    <li>element.setAttribute
+                    </li>
+                    <li>element.removeAttribute
+                    </li>
+                </ul>
+                <p class="font-semibold text-base md:text-3xl">2. Working with CSS Classes</p>
+                <ul class="list-disc ml-2 text-sm md:ml-10 md:text-xl lg:text-2xl mt-4  ">
+                    <li>element.classList.add
+                    </li>
+                    <li>element.classList.remove
+                    </li>
+                    <li>element.classList.toggle
+                    </li>
+                    <li>let hasClass = element.classList.contains
+                    </li>
+                </ul>
+            </div>
+          </div>
+    </section>
+ </main>
 </body>
 </html>
